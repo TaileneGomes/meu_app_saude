@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Aplicativo de Saúde</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Sobre o Aplicativo de Saúde</h1>
+    </header>
+
+    <main class="centered-content">
+        <p>O nosso aplicativo de saúde foi desenvolvido com o objetivo de promover o bem-estar e a qualidade de vida dos usuários. Oferecemos funcionalidades que auxiliam na monitorização da saúde, proporcionando informações e recursos necessários para um estilo de vida saudável.</p>
+    </main>
+
+    <footer>
+        <div class="footer-buttons">
+            <a href="{{ url_for('index') }}" class="footer-button">Página Inicial</a>
+            <a href="{{ url_for('contato') }}" class="footer-button">Contato</a>
+            <a href="{{ url_for('login') }}" class="footer-button">Cadastro</a>
+        </div>
+    </footer>
+   
+</body>
+</html>

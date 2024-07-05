@@ -1,0 +1,137 @@
+/* Reset de estilos básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #e7b6b6; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto no cabeçalho */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: center; /* Alinha o texto centralmente */
+}
+
+h1 {
+    font-size: 32px; /* Tamanho do título principal */
+    font-family: 'Roboto', sans-serif; /* Fonte do título principal */
+    color: #af2961; /* Cor do título principal */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    font-weight: bold; /* Texto em negrito */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+/* Estilos para o conteúdo centralizado */
+.centered-content {
+    text-align: center; /* Alinha o conteúdo ao centro */
+    max-width: 800px; /* Define a largura máxima do conteúdo centralizado */
+    margin: auto; /* Centraliza na horizontal */
+    padding: 20px;
+}
+
+/* Estilos para o formulário de contato */
+form {
+    max-width: 400px; /* Define a largura máxima do formulário */
+    margin: auto; /* Centraliza o formulário na horizontal */
+    background-color: #f0f0f0; /* Cor de fundo do formulário */
+    padding: 20px;
+}
+
+form label {
+    display: block; /* Para que os labels fiquem em blocos separados */
+    margin-bottom: 10px; /* Espaçamento inferior entre os labels */
+}
+
+form input,
+form textarea {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 8px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    box-sizing: border-box; /* Inclui padding e border no width */
+}
+
+form input[type="submit"] {
+    background-color: #af98ec; /* Cor de fundo do botão */
+    color: #af2961; /* Cor do texto no botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+}
+
+form input[type="submit"]:hover {
+    background-color: #c72222; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #e7b6b6; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto no rodapé */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: center; /* Alinha o texto centralmente */
+    position: fixed; /* Fixa o rodapé na parte inferior da tela */
+    width: 100%; /* Largura total */
+    bottom: 0; /* Alinha no fundo da página */
+}
+
+.footer-buttons {
+    max-width: 400px; /* Define a largura máxima dos botões */
+    margin: auto; /* Centraliza os botões na horizontal */
+}
+
+.footer-button {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #fff; /* Cor do texto dos botões */
+    background-color: #af98ec; /* Cor de fundo dos botões */
+    padding: 8px 16px; /* Espaçamento interno dos botões */
+    margin: 0 5px; /* Espaçamento entre os botões */
+    border-radius: 5px; /* Borda arredondada */
+    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+}
+
+.footer-button:hover {
+    background-color: #94b9e9; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para textos comuns */
+body {
+    font-family: 'Roboto', sans-serif; /* Define a fonte para todo o corpo do site */
+    font-size: 16px; /* Tamanho do texto padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilos para links */
+a {
+    color: #4d29af; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+a:hover {
+    color: #c72222; /* Cor do link ao passar o mouse */
+}
+
+/* Estilos para textos específicos da página Sobre */
+main.centered-content {
+    margin-top: 20px; /* Espaço superior */
+}
+
+main.centered-content p {
+    font-size: 18px; /* Tamanho do texto */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    color: #555; /* Cor do texto */
+}
+
+main.centered-content h2 {
+    font-size: 28px; /* Tamanho do título */
+    color: #4d29af; /* Cor do título */
+    margin-bottom: 15px; /* Espaço inferior */
+}
+
+main.centered-content p:first-child {
+    margin-bottom: 20px; /* Espaço abaixo do primeiro parágrafo */
+}

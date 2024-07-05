@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde e Bem-estar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Nosso Site!</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('sobre') }}" class="nav-link">Sobre</a></li>
+                <li><a href="{{ url_for('contato') }}" class="nav-link">Contato</a></li>
+                <li><a href="{{ url_for('login') }}" class="nav-link">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <div class="centered-content">
+            <h2>Seja bem-vindo ao nosso aplicativo de saúde!</h2>
+            <p>Aqui você encontra informações valiosas para melhorar seu bem-estar e qualidade de vida.</p>
+        </div>
+    </section>
+
+    <section class="login-section">
+        <div class="centered-content">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>

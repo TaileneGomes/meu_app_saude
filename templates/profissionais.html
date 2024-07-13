@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissionais - Saúde e Bem-estar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+<body>
+    <header class="profissionais-header">
+        <h1 class="profissionais-title">Profissionais - Saúde e Bem-estar</h1>
+        {% if usuario %}
+            <p>Bem-vindo(a), {{ usuario.nome }} (<a href="{{ url_for('logout') }}">Sair</a>)</p>
+        {% else %}
+            <p><a href="{{ url_for('index') }}">Faça login</a> para acessar esta página.</p>
+        {% endif %}
+    </header>
+
+    <main class="profissionais-main">
+        <section class="profissionais-section">
+            {% for profissional in profissionais %}
+                <div class="quadrado">
+                    <h2>{{ profissional.nome }}</h2>
+                    <p><strong>Email:</strong> {{ profissional.email }}</p>
+                    <p><strong>Telefone:</strong> {{ profissional.telefone }}</p>
+                    <p><strong>Média de Notas:</strong> {{ profissional.media_notas }}</p>
+                    <p><strong>Comentários:</strong> {{ profissional.comentarios | safe }}</p>
+
+                    <!-- Links para editar e excluir -->
+                    {% if usuario %}
+                        <a href="{{ url_for('editar_profissional', profissional_id=profissional.id) }}" class="btn-editar">Editar</a>
+                        <a href="{{ url_for('excluir_profissional', profissional_id=profissional.id) }}" class="btn-excluir">Excluir</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+
+    <footer class="profissionais-footer">
+        <div class="export-buttons">
+            <a href="{{ url_for('gerar_pdf') }}" class="footer-button">Exportar para PDF</a>
+            <a href="{{ url_for('gerar_excel') }}" class="footer-button">Exportar para Excel</a>
+        </div>
+        <div class="footer-buttons">
+            <a href="{{ url_for('index') }}" class="footer-button">Página Inicial</a>
+            <a href="{{ url_for('sobre') }}" class="footer-button">Sobre</a>
+            <a href="{{ url_for('contato') }}" class="footer-button">Contato</a>
+        </div>
+    </footer>
+</body>
+</html>

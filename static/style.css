@@ -8,7 +8,7 @@
 /* Estilos para o cabeçalho */
 header {
     background-color: #e7b6b6; /* Cor de fundo do cabeçalho */
-    color: #fff; /* Cor do texto no cabeçalho */
+    color: #ecb6b6; /* Cor do texto no cabeçalho */
     padding: 10px 20px; /* Espaçamento interno */
     text-align: center; /* Alinha o texto centralmente */
 }
@@ -45,7 +45,8 @@ form label {
 }
 
 form input,
-form textarea {
+form textarea,
+form select {
     width: 100%; /* Ocupa toda a largura disponível */
     padding: 8px; /* Espaçamento interno */
     margin-bottom: 10px; /* Espaçamento inferior */
@@ -77,25 +78,6 @@ footer {
     bottom: 0; /* Alinha no fundo da página */
 }
 
-.footer-buttons {
-    max-width: 400px; /* Define a largura máxima dos botões */
-    margin: auto; /* Centraliza os botões na horizontal */
-}
-
-.footer-button {
-    text-decoration: none; /* Remove sublinhado dos links */
-    color: #fff; /* Cor do texto dos botões */
-    background-color: #af98ec; /* Cor de fundo dos botões */
-    padding: 8px 16px; /* Espaçamento interno dos botões */
-    margin: 0 5px; /* Espaçamento entre os botões */
-    border-radius: 5px; /* Borda arredondada */
-    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
-}
-
-.footer-button:hover {
-    background-color: #94b9e9; /* Cor de fundo ao passar o mouse */
-}
-
 /* Estilos para textos comuns */
 body {
     font-family: 'Roboto', sans-serif; /* Define a fonte para todo o corpo do site */
@@ -112,7 +94,7 @@ a {
 }
 
 a:hover {
-    color: #c72222; /* Cor do link ao passar o mouse */
+    color: #d48d8d; /* Cor do link ao passar o mouse */
 }
 
 /* Estilos para textos específicos da página Sobre */
@@ -135,3 +117,114 @@ main.centered-content h2 {
 main.centered-content p:first-child {
     margin-bottom: 20px; /* Espaço abaixo do primeiro parágrafo */
 }
+
+/* Estilos específicos para a página profissionais.html */
+
+/* Estilo para o cabeçalho da página */
+.profissionais-header {
+    background-color: #e7b6b6; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto no cabeçalho */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Alinha o texto centralmente */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilo para o título da página */
+.profissionais-title {
+    font-size: 32px; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estilo para o conteúdo principal da página */
+.profissionais-main {
+    padding: 50px; /* Espaçamento interno */
+    margin-bottom: 30px; /* Espaçamento inferior */
+    padding: 50px; /* Espaçamento interno */
+    border-radius: 8px; /* Borda arredondada */
+    background-color: #f5f5f5; /* Cor de fundo */
+    
+}
+
+/* Estilo para o nome do profissional */
+.profissional h3 {
+    color: #6d5cae; /* Cor do nome */
+    font-size: 24px; /* Tamanho do nome */
+    margin-bottom: 5px; /* Espaçamento inferior */
+}
+
+/* Estilo para os detalhes do profissional */
+.profissional p {
+    font-size: 16px; /* Tamanho do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilos para os botões do rodapé */
+.footer-buttons {
+    max-width: 200px; /* Define a largura máxima dos botões */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.footer-button {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #fff; /* Cor do texto dos botões */
+    background-color: #e7b6b6; /* Cor de fundo dos botões */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    margin: 0 5px; /* Espaçamento entre os botões */
+    border-radius: 5px; /* Borda arredondada */
+    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+}
+
+.footer-button:hover {
+    background-color: #e7acd6; /* Cor de fundo ao passar o mouse */
+}
+
+        /* Adicione estilos específicos aqui, se necessário */
+        .profissionais-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .profissionais-section {
+            flex: 0 0 70%; /* Largura fixa para os profissionais */
+        }
+
+        .export-buttons {
+            margin-top: 20px; /* Espaço acima dos botões de exportação */
+            text-align: center;
+        }
+
+        .export-buttons a {
+            margin-right: 10px; /* Espaçamento entre os botões */
+        }
+
+        /* Estilo para cada quadrado de profissional */
+        .quadrado {
+            background-color: #da9b9b;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px; /*largura do quadrado */
+            height: 200px; /*altura do quadrado */
+            text-align: center;
+        }
+
+        /* Estilo para a tabela de profissionais */
+        .profissionais-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .profissionais-table th, .profissionais-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .profissionais-table th {
+            background-color: #f2f2f2;
+        }
+    
+
+

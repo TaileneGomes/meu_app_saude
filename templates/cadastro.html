@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Cadastro de Profissionais</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <!-- cadastro.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Cadastro de Profissionais{% endblock %}
+
+{% block content %}
     <header>
-        <h1>Entre em Contato Conosco</h1>
+        <h1>Cadastro de Profissionais de Enfermagem</h1>
     </header>
 
     <div class="centered-content">
-        <form action="{{ url_for('contato') }}" method="POST">
+        <form action="{{ url_for('cadastro') }}" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -25,18 +32,26 @@
             <label for="telefone">Telefone:</label>
             <input type="tel" id="telefone" name="telefone" required>
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            <label for="coren_rs">COREN-RS:</label>
+            <input type="text" id="coren_rs" name="coren_rs" required>
 
-            <input type="submit" value="Enviar">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <input type="submit" value="Cadastrar">
         </form>
     </div>
+{% endblock %}
+
 
     <footer>
         <div class="footer-buttons">
             <a href="{{ url_for('index') }}" class="footer-button">Página Inicial</a>
             <a href="{{ url_for('sobre') }}" class="footer-button">Sobre Nós</a>
-            <a href="{{ url_for('profissionais') }}" class="footer-button">Profissionais</a>
+            <a href="{{ url_for('contato') }}" class="footer-button">Contato</a>
         </div>
     </footer>
 </body>

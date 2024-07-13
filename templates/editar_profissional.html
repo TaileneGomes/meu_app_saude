@@ -1,0 +1,31 @@
+<!-- editar_profissional.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Editar Informações do Profissional</h2>
+  <form method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" value="{{ profissional.nome }}" required>
+    <br>
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco" value="{{ profissional.endereco }}">
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="{{ profissional.email }}" required>
+    <br>
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" value="{{ profissional.telefone }}">
+    <br>
+    <label for="coren_rs">COREN/RS:</label>
+    <input type="text" id="coren_rs" name="coren_rs" value="{{ profissional.coren_rs }}">
+    <br>
+    <label for="username">Usuário:</label>
+    <input type="text" id="username" name="username" value="{{ profissional.username }}" required>
+    <br>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" value="{{ profissional.senha }}" required>
+    <br>
+    <button type="submit">Salvar Alterações</button>
+  </form>
+{% endblock %}

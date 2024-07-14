@@ -52,9 +52,15 @@ def contato():
         telefone = request.form['telefone']
         mensagem = request.form['mensagem']
 
+        # Obtém o ID do usuário logado
+        if 'usuario' in session:
+            usuario_id = session['usuario']['id']
+        else:
+            usuario_id = None
+
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO contatos (nome, endereco, email, telefone, mensagem) VALUES (%s, %s, %s, %s, %s)",
-                    (nome, endereco, email, telefone, mensagem))
+        cur.execute("INSERT INTO contatos (nome, endereco, email, telefone, mensagem, usuario_id) VALUES (%s, %s, %s, %s, %s, %s)",
+                    (nome, endereco, email, telefone, mensagem, usuario_id))
         mysql.connection.commit()
         cur.close()
 

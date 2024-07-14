@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profissionais - Saúde e Bem-estar</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    
 </head>
 <body>
     <header class="profissionais-header">
@@ -19,19 +18,46 @@
 
     <main class="profissionais-main">
         <section class="profissionais-section">
+            <h2>Profissionais Cadastrados</h2>
             {% for profissional in profissionais %}
-                <div class="quadrado">
-                    <h2>{{ profissional.nome }}</h2>
+                <div class="profissional">
+                    <h3>{{ profissional.nome }}</h3>
                     <p><strong>Email:</strong> {{ profissional.email }}</p>
                     <p><strong>Telefone:</strong> {{ profissional.telefone }}</p>
-                    <p><strong>Média de Notas:</strong> {{ profissional.media_notas }}</p>
-                    <p><strong>Comentários:</strong> {{ profissional.comentarios | safe }}</p>
-
-                    <!-- Links para editar e excluir -->
+                    <p><strong>Média de Notas:</strong> {{ profissional.media_notas or 'Sem avaliações' }}</p>
+                    {% if profissional.comentarios %}
+                        <p><strong>Comentários:</strong></p>
+                        <ul>
+                            {% for comentario in profissional.comentarios.split('<br>') %}
+                                <li>{{ comentario }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    
+                    <!-- Formulário de Avaliação -->
+                    <form action="{{ url_for('avaliar_profissional', profissional_id=profissional.id) }}" method="post">
+                        <label for="nota">Nota:</label>
+                        <select name="nota" id="nota">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <br>
+                        <label for="comentario">Comentário:</label>
+                        <textarea name="comentario" id="comentario" rows="3"></textarea>
+                        <br>
+                        <button type="submit">Enviar Avaliação</button>
+                    </form>
+                    
+                    <!-- Links para editar e excluir (se usuário logado) -->
                     {% if usuario %}
                         <a href="{{ url_for('editar_profissional', profissional_id=profissional.id) }}" class="btn-editar">Editar</a>
                         <a href="{{ url_for('excluir_profissional', profissional_id=profissional.id) }}" class="btn-excluir">Excluir</a>
                     {% endif %}
+                    
+                    <hr>
                 </div>
             {% endfor %}
         </section>

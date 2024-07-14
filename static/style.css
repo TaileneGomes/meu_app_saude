@@ -9,7 +9,7 @@
 header {
     background-color: #e7b6b6; /* Cor de fundo do cabeçalho */
     color: #ecb6b6; /* Cor do texto no cabeçalho */
-    padding: 10px 20px; /* Espaçamento interno */
+    padding: 5px 10px; /* Espaçamento interno */
     text-align: center; /* Alinha o texto centralmente */
 }
 
@@ -76,6 +76,7 @@ footer {
     position: fixed; /* Fixa o rodapé na parte inferior da tela */
     width: 100%; /* Largura total */
     bottom: 0; /* Alinha no fundo da página */
+    height: 60px; /* Exemplo: ajuste a altura conforme necessário */
 }
 
 /* Estilos para textos comuns */
@@ -123,7 +124,7 @@ main.centered-content p:first-child {
 /* Estilo para o cabeçalho da página */
 .profissionais-header {
     background-color: #e7b6b6; /* Cor de fundo do cabeçalho */
-    color: #fff; /* Cor do texto no cabeçalho */
+    color: #111010; /* Cor do texto no cabeçalho */
     padding: 20px; /* Espaçamento interno */
     text-align: center; /* Alinha o texto centralmente */
     margin-bottom: 20px; /* Espaçamento inferior */
@@ -161,18 +162,43 @@ main.centered-content p:first-child {
 
 /* Estilos para os botões do rodapé */
 .footer-buttons {
-    max-width: 200px; /* Define a largura máxima dos botões */
-    margin-bottom: 10px; /* Espaçamento inferior */
+    max-width: 350px; /* Define a largura máxima dos botões */
+    margin-top: -10px; /* Espaçamento inferior */
 }
 
 .footer-button {
     text-decoration: none; /* Remove sublinhado dos links */
-    color: #fff; /* Cor do texto dos botões */
+    color: #1a1717; /* Cor do texto dos botões */
     background-color: #e7b6b6; /* Cor de fundo dos botões */
-    padding: 10px 20px; /* Espaçamento interno dos botões */
+    padding: 1px 5px; /* Espaçamento interno dos botões */
     margin: 0 5px; /* Espaçamento entre os botões */
     border-radius: 5px; /* Borda arredondada */
     transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+}
+
+.profissional {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.profissional h2 {
+    margin-top: 0;
+}
+
+.profissional form {
+    margin-top: 10px;
+}
+
+.profissional form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profissional form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 .footer-button:hover {
@@ -191,8 +217,8 @@ main.centered-content p:first-child {
         }
 
         .export-buttons {
-            margin-top: 20px; /* Espaço acima dos botões de exportação */
-            text-align: center;
+            margin-top: 2px; /* Espaço acima dos botões de exportação */
+            text-align: right;
         }
 
         .export-buttons a {
